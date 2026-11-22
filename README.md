@@ -10,8 +10,8 @@ Gününü bir karaktere yazarak, sesli ya da görüntülü anlatırsın; sohbet 
 <br>
 
 [![Canlı](https://img.shields.io/badge/canl%C4%B1-daysayday.com-D9487A?style=for-the-badge)](https://daysayday.com)
-[![TikTok](https://img.shields.io/badge/TikTok-@daysayday-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@daysayday)
-[![YouTube](https://img.shields.io/badge/YouTube-@daysayday-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@daysayday)
+[![TikTok](https://img.shields.io/badge/TikTok-@daysaydayapp-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@daysaydayapp)
+[![YouTube](https://img.shields.io/badge/YouTube-@daysaydayy-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@daysaydayy)
 
 ![JavaScript](https://img.shields.io/badge/Vanilla_JS-ES_Modules-F7DF1E?logo=javascript&logoColor=black)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-RLS%20%7C%20PL%2FpgSQL-4169E1?logo=postgresql&logoColor=white)
@@ -39,7 +39,7 @@ Daysayday'i **fikirden canlı ürüne kadar tek başıma** geliştirdim: ürün 
 
 <table>
 <tr>
-<td align="center" width="33%"><img src="docs/arama.gif" alt="Luna ile görüntülü arama" width="100%"><br><b>Görüntülü konuş</b><br><sub>Konuşma tanıma, sesli yanıt, dudak senkronu, ifade değişimi</sub></td>
+<td align="center" width="33%"><img src="docs/luna-arama.gif" alt="Luna ile görüntülü arama" width="100%"><br><b>Görüntülü konuş</b><br><sub>Konuşma tanıma, sesli yanıt, dudak senkronu, ifade değişimi</sub></td>
 <td align="center" width="33%"><img src="docs/sohbet-gunluk.gif" alt="Sohbetin günlük sayfasına dönüşmesi" width="100%"><br><b>Sohbet → günlük sayfası</b><br><sub>Konuşma bitince senin ağzından yazılmış tarihli bir sayfa</sub></td>
 <td align="center" width="33%"><img src="docs/kurulum.gif" alt="iPhone'a kurulum" width="100%"><br><b>Mağazasız kurulum</b><br><sub>Siteden ana ekrana eklenen PWA</sub></td>
 </tr>
@@ -241,8 +241,8 @@ Uygulamayı tanıtan içerikleri de kendim üretiyorum. Karakter tanıtımları,
 
 <div align="center">
 
-[![TikTok](https://img.shields.io/badge/TikTok-@daysayday-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@daysayday)
-[![YouTube](https://img.shields.io/badge/YouTube-@daysayday-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@daysayday)
+[![TikTok](https://img.shields.io/badge/TikTok-@daysaydayapp-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@daysaydayapp)
+[![YouTube](https://img.shields.io/badge/YouTube-@daysaydayy-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@daysaydayy)
 [![Web](https://img.shields.io/badge/Web-daysayday.com-D9487A?style=for-the-badge)](https://daysayday.com)
 
 </div>
@@ -317,7 +317,7 @@ Uygulamayı tanıtan içerikleri de kendim üretiyorum. Karakter tanıtımları,
 
 <div align="center">
 
-<img src="docs/arama.gif" width="120" alt="Luna">
+<img src="docs/luna-arama.gif" width="120" alt="Luna">
 
 **[daysayday.com](https://daysayday.com)** · Gününü anlat, gerisini biz yazalım.
 
