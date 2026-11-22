@@ -1,0 +1,17 @@
+{
+  "name": "Daysayday",
+  "short_name": "Daysayday",
+  "description": "Gününü anlat, gerisini biz yazalım. Sesli ve görüntülü günlük.",
+  "lang": "tr",
+  "id": "/app/",
+  "start_url": "/app/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5EFF5",
+  "theme_color": "#F5EFF5",
+  "icons": [
+    { "src": "/img/luna-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/luna-icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/img/luna-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

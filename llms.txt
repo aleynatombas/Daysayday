@@ -1,0 +1,30 @@
+# Daysayday
+
+> Daysayday, konuşarak tutulan ücretsiz bir Türkçe günlük uygulamasıdır. Kullanıcı gününü sesli, görüntülü ya da yazılı olarak bir karaktere anlatır; sohbet kendiliğinden, kullanıcının ağzından yazılmış tarihli bir günlük sayfasına dönüşür. Tarayıcıda çalışır, uygulama mağazası gerekmez.
+
+## Ne işe yarar
+- Yazmaya üşenenler için günlük: konuşmak yeterli, sayfayı Daysayday yazar.
+- Görüntülü sohbet: karakter kendi odasından ekranda konuşur; kullanıcının kamerası kullanılmaz.
+- Çiçekli takvim ve vazo: her güne o günün duygusuna göre bir çiçek eklenir (mutlu, sakin, heyecanlı, yorgun, hüzünlü, gergin).
+- Günlük sayfasına fotoğraf eklenebilir; yazı fotoğrafın yanından akar.
+- Aylık özet: ayın çiçekleri, en uzun seri ve ayın anısı; paylaşılabilir kart.
+- Geleceğe mektup: seçilen tarihe kadar kilitli kalan mektup.
+- Hatırlayan arkadaş: karakter önceki günleri hatırlayıp ona göre soru sorar.
+
+## Karakterler
+- Daysy: neşeli ve meraklı en yakın arkadaş.
+- Luna: dobra ve esprili; lafını esirgemez ama hep kullanıcının tarafındadır.
+- Eva: sakin ve tecrübeli, abla gibi; kahvesiz olmaz.
+- Charlie: esprili, dizi ve film tutkunu; her hafta gündemi takip eder.
+
+## Kimler için
+Lise ve üniversite öğrencileri, genç çalışanlar ve günlük tutmak isteyip yazmaya vakit bulamayan herkes.
+
+## Gizlilik
+Ses kaydedilmez; konuşma tarayıcıda yazıya çevrilir. Veriler Avrupa'daki sunucularda (Frankfurt) tutulur. Kullanıcı hesabını ve tüm günlüklerini tek adımda silebilir. Daysayday terapi ya da sağlık hizmeti değildir.
+
+## Bağlantılar
+- [Ana sayfa](https://daysayday.com/): tanıtım ve sık sorulan sorular
+- [Telefona kurulum](https://daysayday.com/telefona-kur.html): ana ekrana ekleme adımları
+- [Gizlilik ve KVKK](https://daysayday.com/gizlilik.html): aydınlatma ve açık rıza metni
+- [Kaydol](https://daysayday.com/app/#kaydol): ücretsiz hesap oluşturma

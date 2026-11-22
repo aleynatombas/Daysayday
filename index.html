@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daysayday · Gününü anlat, gerisini biz yazalım</title>
+<meta name="description" content="Daysayday, konuşarak tutulan ücretsiz bir günlük uygulaması. Daysy, Luna, Eva ya da Charlie ile sesli veya görüntülü sohbet et; günün kendiliğinden tarihli bir günlük sayfasına dönüşsün.">
+<link rel="canonical" href="https://daysayday.com/">
+<script>
+  // Oturumu açık olan kullanıcı tanıtımı görmeden doğrudan uygulamaya geçer.
+  try { if (localStorage.getItem("sb-gptzbqozsiktakcqafjn-auth-token") && !location.hash.includes("tanitim")) location.replace("/app/"); } catch (e) {}
+</script>
+<meta property="og:image" content="https://daysayday.com/img/og-luna.jpg">
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="640">
+<meta name="twitter:image" content="https://daysayday.com/img/og-luna.jpg">
+<link rel="icon" href="/favicon.ico?v=luna" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/luna-favicon-32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/img/luna-favicon-96.png">
+<link rel="apple-touch-icon" href="/img/luna-apple-touch-icon.png">
+<script>/* Uygulama penceresinde (ana ekran / masaüstü uygulaması) açıldıysa tanıtım sayfası yerine doğrudan uygulamayı aç */(function(){var app=navigator.standalone===true||["standalone","minimal-ui","fullscreen","window-controls-overlay"].some(function(m){return matchMedia("(display-mode: "+m+")").matches});if(app)location.replace("/app/");})();</script>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#F5EFF5">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebApplication", "name": "Daysayday", "url": "https://daysayday.com/", "applicationCategory": "LifestyleApplication", "operatingSystem": "Web, iOS, Android (tarayıcı)", "inLanguage": "tr", "description": "Konuşarak tutulan günlük. Bir karaktere gününü anlat, sohbetin tarihli bir günlük sayfasına dönüşsün.", "image": "https://daysayday.com/img/og-luna.jpg", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "TRY"}}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Daysayday nedir?", "acceptedAnswer": {"@type": "Answer", "text": "Daysayday, konuşarak tutulan bir günlük uygulamasıdır. Günün nasıl geçtiğini bir karaktere anlatırsın; sohbetin kendiliğinden tarihli bir günlük sayfasına dönüşür."}}, {"@type": "Question", "name": "Daysayday ücretli mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır, Daysayday ücretsizdir. Uygulama mağazası gerekmez; tarayıcıdan açılır ve telefonun ana ekranına eklenebilir."}}, {"@type": "Question", "name": "Günlüğümü yazmam gerekiyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır, konuşman yeter. İstersen yazarak da anlatabilirsin. Sayfayı senin anlattıklarından, senin ağzından Daysayday yazar."}}, {"@type": "Question", "name": "Sesim kaydediliyor mu?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Konuşman cihazındaki tarayıcıda yazıya çevrilir ve sunucuya yalnızca metin gider. Görüntülü sohbette senin kameran kullanılmaz."}}, {"@type": "Question", "name": "Karakterler kimler?", "acceptedAnswer": {"@type": "Answer", "text": "Dört karakter var: neşeli ve meraklı Daysy, dobra ve esprili Luna, sakin ve tecrübeli Eva, dizi ve film tutkunu Charlie. İstediğini seçip sonra değiştirebilirsin."}}, {"@type": "Question", "name": "Günlüklerimi silebilir miyim?", "acceptedAnswer": {"@type": "Answer", "text": "Evet. Ayarlar bölümündeki “Hesabımı ve tüm günlüklerimi sil” ile hesabını ve bütün günlüklerini kalıcı olarak silebilirsin."}}, {"@type": "Question", "name": "Daysayday terapi yerine geçer mi?", "acceptedAnswer": {"@type": "Answer", "text": "Hayır. Daysayday bir günlük uygulamasıdır, terapi ya da sağlık hizmeti değildir. Kendini kötü hissediyorsan güvendiğin biriyle konuş; acil durumda 112'yi ara."}}]}]</script>
+<meta property="og:title" content="Daysayday · Gününü anlat, gerisini biz yazalım">
+<meta property="og:description" content="Konuşarak tutulan günlük. Daysy, Luna, Eva ve Charlie seni dinliyor, günün bir sayfaya dönüşüyor.">
+<meta property="og:url" content="https://daysayday.com/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Daysayday">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink: #2A1B30; --muted: #4A3A55; --soft: #5E5066; --accent: #D9487A; --accent-dk: #B8335F; --bg: #F5EFF5; --night: #1C1424; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Figtree", system-ui, sans-serif; }
+  a { color: var(--accent); }
+  .disp { font-family: "Bricolage Grotesque", system-ui, sans-serif; letter-spacing: -0.02em; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 24px; border-radius: 16px; border: 0; font: 700 17px "Figtree", sans-serif; text-decoration: none; cursor: pointer; }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-primary:hover { background: var(--accent-dk); color: #fff; }
+  .btn-dark { background: var(--ink); color: #fff; }
+  .btn-ghost { background: #fff; color: var(--ink); border: 1.5px solid #E2D6E6; }
+  .btn:focus-visible, a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  header.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; max-width: 1200px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+  .brand img { width: 40px; height: 40px; }
+  .brand span { font-weight: 800; font-size: 24px; }
+  .brand b { color: var(--accent); font-weight: 800; }
+  nav.links { display: flex; align-items: center; gap: 22px; font-weight: 600; }
+  nav.links a.l { color: var(--ink); text-decoration: none; }
+  nav.links .btn { min-height: 44px; padding: 0 16px; font-size: 15px; white-space: nowrap; }
+
+  .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 72px 24px 96px; position: relative; }
+  .hero > div { max-width: 820px; display: flex; flex-direction: column; align-items: center; }
+  .hero .cta, .hero .platforms { justify-content: center; }
+  .hero::before, .hero::after { content: ""; position: absolute; width: 90px; height: 90px; background: url(/img/flower-mutlu.svg) center/contain no-repeat; opacity: .55; animation: bobby 6s ease-in-out infinite; pointer-events: none; }
+  .hero::before { left: 6%; top: 22%; transform: rotate(-12deg); }
+  .hero::after { right: 7%; bottom: 26%; width: 70px; height: 70px; background-image: url(/img/flower-heyecanli.svg); animation-delay: -3s; }
+  @media (max-width: 700px) { .hero::before, .hero::after { display: none; } }
+  .pill { display: inline-block; padding: 8px 14px; border-radius: 999px; background: #FCE3EC; color: var(--accent-dk); font-size: 14px; font-weight: 700; }
+  .hero h1 { margin: 18px 0; font-size: clamp(44px, 7.4vw, 84px); line-height: 1.02; font-weight: 800; }
+  .hero h1 em { font-style: normal; color: var(--accent); }
+  .hero p.lead { margin: 0 0 26px; font-size: 20px; line-height: 1.55; color: var(--muted); max-width: 640px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero small { display: block; margin-top: 16px; font-size: 14px; color: var(--soft); }
+  .platforms { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 20px; font-size: 14px; font-weight: 600; color: var(--soft); }
+  .platforms span { padding: 6px 12px; border-radius: 999px; background: #fff; border: 1px solid #E7DCEA; }
+  .platforms a { margin-left: 4px; color: var(--ink); font-weight: 700; text-decoration: none; }
+  .platforms a:hover { color: var(--accent); }
+  .hero .photo { width: 100%; max-width: 520px; justify-self: center; border-radius: 40px; box-shadow: 0 30px 60px rgba(42,27,48,.25); display: block; }
+
+  .calls { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; margin-top: 28px; }
+  .callclip { margin: 0; text-align: center; }
+  .callclip video { width: 100%; aspect-ratio: 390 / 844; object-fit: cover; display: block; border-radius: 32px; background: #1C1622; box-shadow: 0 0 0 6px #1C1622, 0 22px 44px rgba(42,27,48,.22); }
+  .callclip figcaption { margin-top: 16px; font-size: 15px; color: var(--muted); }
+  .callclip figcaption b { color: var(--ink); }
+  @media (max-width: 900px) { .calls { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .purpose { background: var(--ink); color: #fff; }
+  .purpose .wrap { max-width: 1000px; text-align: center; padding: 72px 24px; }
+  .eyebrow { font-size: 14px; font-weight: 700; letter-spacing: .12em; }
+  .purpose .eyebrow { color: #F28DB2; }
+  .purpose h2 { margin: 14px 0; font-size: clamp(30px, 4vw, 44px); line-height: 1.1; font-weight: 800; }
+  .purpose p { margin: 0 auto; max-width: 760px; font-size: 19px; line-height: 1.6; color: #E4D8EE; }
+
+  section.block { padding: 72px 24px 24px; }
+  section.block h2 { margin: 0 0 10px; text-align: center; font-size: clamp(32px, 4vw, 44px); font-weight: 800; }
+  .faq { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+  .faq details { background: #fff; border-radius: 18px; padding: 16px 20px; box-shadow: 0 4px 14px rgba(42,27,48,.06); }
+  .faq summary { cursor: pointer; font-weight: 800; font-size: 18px; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--accent, #E2528A); font-size: 22px; line-height: 1; }
+  .faq details[open] summary::after { content: "–"; }
+  .faq p { margin: 10px 0 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+  section.block .sub { margin: 0 0 30px; text-align: center; font-size: 18px; color: var(--muted); }
+  .grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  .grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  @media (max-width: 1100px) { .friends4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .friends4 { grid-template-columns: 1fr; } }
+  .card { background: #fff; border-radius: 26px; padding: 26px; }
+  .card h3 { margin: 10px 0 8px; font-size: 21px; }
+  .card p { margin: 0; font-size: 16px; line-height: 1.5; color: var(--muted); }
+  .num { font-size: 40px; font-weight: 800; color: var(--accent); line-height: 1; }
+  .card svg, .card .ic { width: 34px; height: 34px; }
+  .lilac { background: #EFE5FF; } .pink { background: #FCE3EC; } .sage { background: #E6F0E0; }
+  .night { background: var(--night); color: #fff; } .night p { color: #E4D8EE; }
+  .friend { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; border-radius: 30px; padding: 24px; }
+  .friend img { width: 210px; height: 230px; }
+  .friend h3 { margin: 0; font-size: 28px; font-weight: 800; }
+  .friend .who { font-size: 15px; font-weight: 700; }
+  .friend p { margin: 0; font-size: 17px; line-height: 1.45; }
+
+  .table-box { max-width: 960px; margin: 0 auto; overflow-x: auto; background: #fff; border-radius: 26px; padding: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 16px; min-width: 620px; }
+  th, td { padding: 15px 18px; text-align: left; }
+  th { color: var(--soft); font-weight: 600; }
+  th.us { background: #FCE3EC; color: var(--ink); font-weight: 800; font-size: 18px; border-radius: 16px 16px 0 0; }
+  td { border-top: 1px solid #F0E8F3; color: var(--muted); }
+  td:first-child { color: var(--ink); font-weight: 700; }
+  td.us { background: #FDF1F5; color: var(--ink); font-weight: 600; }
+  tr:last-child td.us { border-radius: 0 0 16px 16px; }
+
+  .privacy { max-width: 960px; margin: 24px auto 0; background: #fff; border-radius: 26px; padding: 24px 28px; display: flex; gap: 18px; align-items: center; }
+  .privacy h3 { margin: 0; font-size: 20px; } .privacy p { margin: 6px 0 0; color: var(--muted); line-height: 1.5; }
+
+  .final { margin-top: 72px; background: radial-gradient(600px 400px at 50% 0%, #4B2E6E 0%, var(--night) 75%); color: #fff; }
+  .final .wrap { max-width: 900px; text-align: center; padding: 80px 24px 40px; }
+  .final img { width: 96px; height: 96px; }
+  .final h2 { margin: 16px 0 10px; font-size: clamp(34px, 5vw, 50px); font-weight: 800; line-height: 1.05; }
+  .final p { margin: 0 0 26px; font-size: 19px; color: #E4D8EE; }
+  .final .cta { justify-content: center; }
+  footer { max-width: 1200px; margin: 0 auto; padding: 22px 24px 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #B9A9C9; border-top: 1px solid rgba(255,255,255,.1); }
+  footer a { color: #E4D8EE; margin-left: 16px; }
+
+  /* full-height hero: nothing peeks in from below */
+  .hero { min-height: calc(100svh - 70px); position: relative; }
+  .hero > div:not(.floaties) { position: relative; z-index: 1; }
+  .floaties { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }
+  .floaties img { position: absolute; width: 38px; opacity: .85; animation: floaty 7s ease-in-out infinite; }
+  @keyframes floaty { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-22px) rotate(14deg); } }
+  .photo-wrap { justify-self: center; width: 100%; max-width: min(520px, 64vh); animation: bobby 5s ease-in-out infinite; }
+  .photo-wrap .photo { transition: transform .4s cubic-bezier(.3,1.4,.5,1); }
+  .photo-wrap:hover .photo { transform: rotate(-2deg) scale(1.03); }
+  @keyframes bobby { 50% { transform: translateY(-10px); } }
+  .scroll-cue { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: var(--soft); text-decoration: none; z-index: 1; }
+  .scroll-cue svg { width: 22px; height: 22px; animation: nudge 1.6s ease-in-out infinite; }
+  @keyframes nudge { 50% { transform: translateY(6px); } }
+  .wave-word { display: inline-block; animation: wiggle 2.8s ease-in-out infinite; transform-origin: 50% 80%; }
+  @keyframes wiggle { 0%, 70%, 100% { transform: rotate(0); } 78% { transform: rotate(-5deg) scale(1.06); } 86% { transform: rotate(4deg); } 94% { transform: rotate(-2deg); } }
+
+  /* reveal on scroll */
+  .rv { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1); }
+  .rv.in { opacity: 1; transform: none; }
+  .grid4 .rv:nth-child(2), .grid3 .rv:nth-child(2) { transition-delay: .1s; } .grid4 .rv:nth-child(3), .grid3 .rv:nth-child(3) { transition-delay: .2s; } .grid4 .rv:nth-child(4) { transition-delay: .3s; }
+  .card { transition: transform .3s cubic-bezier(.3,1.4,.5,1), box-shadow .3s; }
+  .card:hover { transform: translateY(-6px) rotate(-.6deg); box-shadow: 0 16px 34px rgba(42,27,48,.1); }
+
+  /* live demo */
+  .demo { margin-top: 28px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: stretch; }
+  .demo .chatbox, .demo .pagebox { background: #fff; border-radius: 28px; padding: 22px; min-height: 330px; }
+  .demo .chatbox { display: flex; flex-direction: column; gap: 10px; }
+  .demo .k { font-size: 13px; font-weight: 700; letter-spacing: .08em; color: var(--soft); }
+  .bub { max-width: 82%; padding: 10px 14px; border-radius: 18px; font-size: 16px; line-height: 1.4; opacity: 0; transform: translateY(10px) scale(.96); transition: all .45s cubic-bezier(.3,1.4,.5,1); }
+  .bub.show { opacity: 1; transform: none; }
+  .bub.a { background: #F3ECF8; border-bottom-left-radius: 6px; align-self: flex-start; }
+  .bub.u { background: var(--ink); color: #fff; border-bottom-right-radius: 6px; align-self: flex-end; }
+  .bub.typing { display: inline-flex; gap: 4px; padding: 14px; } .bub.typing i { width: 7px; height: 7px; border-radius: 4px; background: #A99BB2; animation: dot 1s infinite; } .bub.typing i:nth-child(2) { animation-delay: .15s; } .bub.typing i:nth-child(3) { animation-delay: .3s; }
+  @keyframes dot { 50% { opacity: .3; transform: translateY(-3px); } }
+  .pagebox { background: #FFFDF8 !important; box-shadow: 0 12px 30px rgba(42,27,48,.07); opacity: .25; transform: rotate(2deg) scale(.96); transition: all .7s cubic-bezier(.3,1.3,.5,1); position: relative; }
+  .pagebox.show { opacity: 1; transform: rotate(-1deg); }
+  .pagebox .when { font-size: 13px; font-weight: 700; letter-spacing: .08em; color: var(--accent); }
+  .pagebox h3 { margin: 8px 0; font-size: 26px; font-weight: 800; }
+  .pagebox p { margin: 0 0 10px; color: #3A2C40; line-height: 1.6; }
+  .pagebox .stamp { position: absolute; right: 18px; top: 16px; width: 64px; height: 64px; transform: scale(0) rotate(-40deg); transition: transform .6s cubic-bezier(.3,1.8,.5,1) .5s; }
+  .pagebox.show .stamp { transform: scale(1) rotate(0); }
+
+  /* live characters */
+  .friend { cursor: pointer; border: 0; font: inherit; color: inherit; position: relative; }
+  .friend .live { width: 220px; height: 240px; }
+  .friend .tap { font-size: 13px; font-weight: 700; color: var(--soft); display: inline-flex; align-items: center; gap: 6px; }
+  .friend .said { min-height: 50px; }
+  .friend:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+  /* streak teaser */
+  .flame-card { display: flex; align-items: center; gap: 18px; }
+  .flame-card .big { font-family: "Bricolage Grotesque", sans-serif; font-size: 54px; font-weight: 800; color: #FF6A2B; line-height: 1; min-width: 70px; text-align: center; }
+  .flame-card svg.fl { width: 70px; height: 70px; flex: none; animation: flick 1.6s ease-in-out infinite; transform-origin: 50% 90%; filter: drop-shadow(0 6px 14px rgba(255,110,40,.4)); }
+  @keyframes flick { 50% { transform: scale(1.06) rotate(-2deg); } }
+
+  /* download section */
+  .dl { max-width: 1000px; margin: 0 auto; background: #fff; border-radius: 30px; padding: 22px; box-shadow: 0 12px 30px rgba(42,27,48,.06); }
+  .dl-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; background: #F1EAF4; border-radius: 18px; padding: 5px; margin-bottom: 22px; }
+  .dl-tabs button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; border: 0; border-radius: 14px; background: transparent; font: 700 16px "Figtree", sans-serif; color: var(--soft); cursor: pointer; }
+  .dl-tabs button svg { width: 20px; height: 20px; }
+  .dl-tabs button[aria-selected="true"] { background: #fff; color: var(--ink); box-shadow: 0 2px 10px rgba(42,27,48,.08); }
+  .dl-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .st > b { display: block; margin-top: 12px; font-size: 17px; } .st p { margin: 4px 0 0; color: var(--muted); font-size: 15px; line-height: 1.45; }
+  .ph { height: 190px; border-radius: 22px; background: #F6F0F8; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; padding: 12px; }
+  .ph .bar { position: absolute; top: 14px; left: 12px; right: 12px; height: 30px; border-radius: 10px; background: #fff; font-size: 12px; color: var(--soft); display: grid; place-items: center; }
+  .share-hl { width: 54px; height: 54px; border-radius: 16px; background: #fff; display: grid; place-items: center; color: #2F7BF6; box-shadow: 0 0 0 4px rgba(47,123,246,.25); animation: pulse2 1.6s ease-in-out infinite; }
+  .share-hl svg { width: 28px; height: 28px; }
+  @keyframes pulse2 { 50% { box-shadow: 0 0 0 10px rgba(47,123,246,.12); transform: scale(1.06); } }
+  .sheet { width: 100%; background: #fff; border-radius: 14px; overflow: hidden; }
+  .sheet .row { padding: 10px 12px; font-size: 13px; border-top: 1px solid #EEE; display: flex; align-items: center; gap: 8px; }
+  .sheet .row:first-child { border-top: 0; }
+  .sheet .row.hl { background: #EAF2FF; font-weight: 700; color: #1C5FD1; animation: pulse3 1.6s ease-in-out infinite; } .sheet .row svg { width: 18px; height: 18px; }
+  @keyframes pulse3 { 50% { background: #D7E6FF; } }
+  .addbox { width: 100%; background: #fff; border-radius: 14px; padding: 12px; display: flex; gap: 10px; align-items: center; }
+  .addbox img { width: 44px; height: 44px; border-radius: 11px; } .addbox b { display: block; font-size: 14px; margin: 0; } .addbox span { font-size: 11px; color: var(--soft); }
+  .addbox .tg { display: inline-block; vertical-align: middle; margin-left: 6px; width: 30px; height: 18px; border-radius: 9px; background: #34C759; position: relative; } .addbox .tg::after { content: ""; position: absolute; right: 2px; top: 2px; width: 14px; height: 14px; border-radius: 7px; background: #fff; }
+  .addbtn { position: absolute; top: 14px; right: 14px; background: #2F7BF6; color: #fff; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 10px; animation: pulse2 1.6s ease-in-out infinite; }
+  .ph.home { background: linear-gradient(160deg, #6E5BD8, #E07AA8); color: #fff; justify-content: center; gap: 6px; }
+  .apps { display: grid; grid-template-columns: repeat(4, 34px); gap: 10px; } .apps i { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,.35); } .apps img { width: 34px; height: 34px; border-radius: 9px; animation: pop 1.8s ease-in-out infinite; }
+  @keyframes pop { 0%, 60%, 100% { transform: scale(1); } 70% { transform: scale(1.25); } 80% { transform: scale(.95); } }
+  .ph.home span { font-size: 12px; font-weight: 700; }
+  .dl-hero { display: flex; gap: 22px; align-items: center; }
+  .dl-hero > img { border-radius: 24px; box-shadow: 0 10px 24px rgba(42,27,48,.15); flex: none; }
+  .dl-hero h3 { margin: 0; font-size: 28px; font-weight: 800; } .dl-hero p { margin: 4px 0 14px; color: var(--muted); }
+  .dl-note { font-size: 14px; color: var(--soft); margin: 14px 0 0 !important; line-height: 1.5; }
+  .dl-done { text-align: center; font-weight: 700; color: #2E7D4F; margin: 14px 0 0; }
+  @media (max-width: 900px) { .dl-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 520px) { .dl { padding: 14px; } .dl-steps { grid-template-columns: 1fr; } .dl-hero { flex-direction: column; text-align: center; } .dl-tabs button { font-size: 14px; } }
+
+  @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .rv { opacity: 1; transform: none; } }
+
+  @media (max-width: 900px) {
+    .demo { grid-template-columns: 1fr; }
+    .hero { grid-template-columns: 1fr; padding-top: 8px; }
+    .hero .photo { max-width: 100%; }
+    .photo-wrap { max-width: 400px; }
+    .hero { min-height: auto; padding-bottom: 64px; }
+    .grid4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid3 { grid-template-columns: 1fr; }
+    nav.links a.l { display: none; }
+  }
+  @media (max-width: 520px) {
+    header.top { padding: 14px 16px; gap: 8px; }
+    .brand img { width: 34px; height: 34px; }
+    nav.links { gap: 6px; }
+    nav.links .btn { min-height: 40px; padding: 0 12px; font-size: 14px; border-radius: 12px; }
+    .hero { padding: 4px 16px 48px; gap: 28px; }
+    .hero h1 { font-size: 40px; margin: 14px 0; }
+    .hero p.lead { font-size: 17px; }
+    .cta .btn { width: 100%; }
+    .platforms a { width: 100%; margin: 4px 0 0; }
+    .photo-wrap { max-width: 340px; }
+    .scroll-cue { display: none; }
+    .grid4 { grid-template-columns: 1fr; }
+    .brand span { font-size: 20px; }
+    .privacy { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/#tanitim"><img src="/img/logo.png" alt=""><span class="disp">Day<b>say</b>day</span></a>
+  <nav class="links" aria-label="Ana menü">
+    <a class="l" href="#nasil">Nasıl çalışır</a>
+    <a class="l" href="#karakterler">Karakterler</a>
+    <a class="l" href="#neden">Neden Daysayday</a>
+    <a class="l" href="#kur">Uygulamayı indir</a>
+    <a class="btn btn-ghost" href="/app/#giris">Giriş yap</a>
+    <a class="btn btn-dark" href="/app/#kaydol">Kaydol</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div>
+      <span class="pill">Ücretsiz · Sesli ve görüntülü günlük</span>
+      <h1 class="disp">Gününü anlat,<br>gerisini <em class="wave-word">biz yazalım.</em></h1>
+      <p class="lead">Daysayday, her akşam bir arkadaşınla sesli ya da görüntülü sohbet ederek günlük tutmanı sağlar. Sen konuşursun; o dünü hatırlar, sorular sorar ve gününü tarihli bir günlük sayfasına çevirir.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="/app/#kaydol">Ücretsiz kaydol</a>
+        <a class="btn btn-ghost" href="/app/#giris">Hesabım var, giriş yap</a>
+      </div>
+      <div class="platforms"><span>iPhone</span><span>Android</span><span>Bilgisayar</span><a href="#kur">Uygulamayı indir →</a></div>
+    </div>
+    <a class="scroll-cue" href="#amac">Keşfet<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
+  </section>
+
+  <section class="purpose" id="amac">
+    <div class="wrap">
+      <div class="eyebrow">AMACIMIZ</div>
+      <h2 class="disp">Günlük tutmak bir ödev değil, akşam sohbeti olsun.</h2>
+      <p>Çoğumuz günlüğe heyecanla başlayıp birkaç gün sonra bırakıyoruz: boş sayfa korkutuyor, yazmak yoruyor. Daysayday bunu 3 dakikalık bir sohbete çeviriyor ve aylar sonra geri dönüp kendi hikayeni okuyabileceğin, duygularını görebileceğin bir arşiv bırakıyor.</p>
+    </div>
+  </section>
+
+  <section class="block wrap" id="nasil">
+    <h2 class="disp">Nasıl çalışır?</h2>
+    <p class="sub">Dört adım, birkaç dakika.</p>
+    <div class="grid4">
+      <div class="card rv"><div class="num disp">1</div><h3>Konuş</h3><p>Görüntülü sohbeti aç ya da mikrofona bas, gününü anlat. İstersen yaz.</p></div>
+      <div class="card rv"><div class="num disp">2</div><h3>Seni hatırlasın</h3><p>“Dün o sunum için çok gergindin, nasıl geçti?” Arkadaşın önceki günlerini bilir, ona göre sorar.</p></div>
+      <div class="card rv"><div class="num disp">3</div><h3>Günlüğün yazılsın</h3><p>Sohbet biter; gününden başlıklı, tarihli, güzel bir günlük sayfası çıkar. Dilediğin gibi düzenlersin.</p></div>
+      <div class="card rv"><div class="num disp">4</div><h3>Takvimin çiçeklensin</h3><p>Her gün bir ruh hali çiçeği alır. Ay ilerledikçe duygu haritan kendiliğinden oluşur.</p></div>
+    </div>
+    <div class="demo rv" id="demo" aria-label="Örnek sohbet ve günlük sayfası">
+      <div class="chatbox" id="demoChat"><div class="k">ÖRNEK SOHBET · DAYSY</div></div>
+      <div class="pagebox" id="demoPage">
+        <img class="stamp" src="/img/flower-mutlu.svg" alt="Mutlu çiçeği">
+        <div class="when">17 KASIM · SALI</div>
+        <h3 class="disp">Sunum gerginliği boşunaymış</h3>
+        <p>Dün geceki stres boşunaymış; sunum beklediğimden çok daha iyi geçti. Hocam en sonda “bunu yayınlamayı düşün” dedi.</p>
+        <p>Öğleden sonra Elif'le kahve içip bol bol güldük. Eve dönerken içim hafiflemişti.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="goruntulu">
+    <h2 class="disp">Arkadaşın seni odasından arasın</h2>
+    <p class="sub">Görüntülü konuşmada her karakter kendi odasında, masasının başında. Konuşurken ağzı oynar, güler, şaşırır, kaşını kaldırır. İstersen sadece sesli de konuşabilirsin.</p>
+    <div class="calls">
+      <figure class="callclip rv"><video autoplay muted loop playsinline preload="none" poster="/img/gorusme/daysy.jpg" aria-label="Daysy ile görüntülü konuşma"><source src="/img/gorusme/daysy.mp4" type="video/mp4"></video><figcaption><b>Daysy</b> sevinci paylaşır</figcaption></figure>
+      <figure class="callclip rv"><video autoplay muted loop playsinline preload="none" poster="/img/gorusme/ivy.jpg" aria-label="Luna ile görüntülü konuşma"><source src="/img/gorusme/ivy.mp4" type="video/mp4"></video><figcaption><b>Luna</b> laf sokar ama dinler</figcaption></figure>
+      <figure class="callclip rv"><video autoplay muted loop playsinline preload="none" poster="/img/gorusme/charlie.jpg" aria-label="Charlie ile görüntülü konuşma"><source src="/img/gorusme/charlie.mp4" type="video/mp4"></video><figcaption><b>Charlie</b> her şeyi filme çevirir</figcaption></figure>
+      <figure class="callclip rv"><video autoplay muted loop playsinline preload="none" poster="/img/gorusme/sage.jpg" aria-label="Eva ile görüntülü konuşma"><source src="/img/gorusme/sage.mp4" type="video/mp4"></video><figcaption><b>Eva</b> kahvesiyle dinler</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="block wrap">
+    <h2 class="disp">Neler var?</h2>
+    <p class="sub">Günlük tutmayı kolay ve sürdürülebilir kılan özellikler.</p>
+    <div class="grid3">
+      <div class="card lilac"><svg viewBox="0 0 24 24" fill="none" stroke="#7A57C9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="3"/><path d="M16 10l5-3v10l-5-3"/></svg><h3>Görüntülü sohbet</h3><p>Karakterin ekranında konuşur, mimikleri cevabına göre değişir. Senin kameran kapalı kalır.</p></div>
+      <div class="card pink"><svg viewBox="0 0 24 24" fill="none" stroke="#B8335F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg><h3>Hatırlayan arkadaş</h3><p>Dünkü konuyu, yarınki planını unutmaz. Her akşam kaldığınız yerden devam edersiniz.</p></div>
+      <div class="card sage"><img class="ic" src="/img/flower-mutlu.svg" alt=""><h3>Çiçekli takvim</h3><p>Mutlu, sakin, heyecanlı, yorgun, hüzünlü, gergin: her günün bir çiçeği var.</p></div>
+      <div class="card flame-card" id="flameCard" style="grid-column:1/-1;background:linear-gradient(90deg,#FFE9D6,#FFF8F1)">
+        <svg class="fl" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="lfa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFB13B"/><stop offset="1" stop-color="#FF5A36"/></linearGradient><linearGradient id="lfb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF3A6"/><stop offset="1" stop-color="#FFC531"/></linearGradient></defs><path d="M50 4C56 22 78 32 78 60a28 28 0 0 1-56 0c0-14 8-20 10-32 7 6 11 12 12 20 4-12 6-26 6-44z" fill="url(#lfa)"/><path d="M50 46c4 9 14 14 14 26a14 14 0 0 1-28 0c0-7 4-10 5-16 4 3 6 6 6 10 2-6 3-12 3-20z" fill="url(#lfb)"/></svg>
+        <div class="big" id="flameNum">0</div>
+        <div><h3 style="margin:0 0 4px">Serini sürdür</h3><p>Her gün yazdığında serin uzar ve yeni rozetler kazanırsın. Seriye ara vermemen için arkadaşın sana hatırlatır.</p></div>
+      </div>
+      <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="#2A1B30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l-3 2"/></svg><h3>1 hafta önce bugün</h3><p>Geçen haftanın aynı gününden küçük bir anı çıkar karşına.</p></div>
+      <div class="card night"><svg viewBox="0 0 24 24" fill="none" stroke="#F28DB2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><h3>Aylık özet</h3><p>Ayın çiçekleri, en uzun serin, ayın anısı. Hikayende paylaşmalık bir kart.</p></div>
+      <div class="card"><svg viewBox="0 0 24 24" fill="none" stroke="#2A1B30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg><h3>Geleceğe mektup</h3><p>Kendine bir mektup yaz, seçtiğin tarihe kadar kilitli kalsın.</p></div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="karakterler">
+    <h2 class="disp">Akşam arkadaşını seç</h2>
+    <p class="sub">Dört farklı karakter, dört farklı sohbet tarzı. Tanımak için birine dokun.</p>
+    <div class="grid4 friends4">
+      <button type="button" class="friend lilac rv" data-k="daysy" aria-label="Daysy ile tanış"><div class="live" data-k="daysy"><img src="/img/daysy_happy.svg" alt="" style="width:220px;height:240px"></div><h3 class="disp">Daysy</h3><div class="who" style="color:#7A57C9">Gündüz · neşeli ve meraklı en yakın arkadaşın</div><p class="said">“Selaaam! Hadi biraz sohbet edelim, bugün nasıldı?”</p><span class="tap"></span></button>
+      <button type="button" class="friend rv" data-k="ivy" style="background:#E3E6F7" aria-label="Luna ile tanış"><div class="live" data-k="ivy"><img src="/img/ivy_happy.svg" alt="" style="width:220px;height:240px"></div><h3 class="disp">Luna</h3><div class="who" style="color:#2E3150">Gece · dobra, esprili, hep senin tarafında</div><p class="said">“Anlat bakalım. Kim ne yaptı yine?”</p><span class="tap"></span></button>
+      <button type="button" class="friend sage rv" data-k="sage" aria-label="Eva ile tanış"><div class="live" data-k="sage"><img src="/img/sage_happy.svg" alt="" style="width:220px;height:240px"></div><h3 class="disp">Eva</h3><div class="who" style="color:#4F7A5A">Akşam · sakin ve tecrübeli, abla gibi</div><p class="said">“Kahveni al gel. Bugün seni ne yordu?”</p><span class="tap"></span></button>
+      <button type="button" class="friend rv" data-k="charlie" style="background:#FFE9C4" aria-label="Charlie ile tanış"><div class="live" data-k="charlie"><img src="/img/charlie_happy.svg" alt="" style="width:220px;height:240px"></div><h3 class="disp">Charlie</h3><div class="who" style="color:#9A6418">Film gecesi · esprili, dizi ve film tutkunu</div><p class="said">“Lafı gediğine koyarım, filmi yarıda bırakmam!”</p><span class="tap"></span></button>
+    </div>
+  </section>
+
+  <section class="block wrap" id="neden">
+    <h2 class="disp">Neden Daysayday?</h2>
+    <p class="sub">Klasik günlük ya da sıradan bir yapay zekâ sohbetinden farkı.</p>
+    <div class="table-box">
+      <table>
+        <thead><tr><th scope="col"><span style="position:absolute;left:-9999px">Soru</span></th><th scope="col">Klasik günlük</th><th scope="col">Sıradan yapay zekâ sohbeti</th><th scope="col" class="us disp">Daysayday</th></tr></thead>
+        <tbody>
+          <tr><td>Yazmak zorunda mısın?</td><td>Evet</td><td>Genelde evet</td><td class="us">Hayır, konuşman yeter</td></tr>
+          <tr><td>Dünü hatırlıyor mu?</td><td>Sen dönüp okursan</td><td>Çoğu zaman hayır</td><td class="us">Evet, ona göre sorar</td></tr>
+          <tr><td>Günlük sayfası çıkıyor mu?</td><td>Kendin yazarsın</td><td>Hayır, sohbet kaybolur</td><td class="us">Evet, tarihli ve düzenli</td></tr>
+          <tr><td>Duygularını görüyor musun?</td><td>Hayır</td><td>Hayır</td><td class="us">Çiçekli takvim ve aylık özet</td></tr>
+          <tr><td>Bir karakteri var mı?</td><td>Hayır</td><td>Tek tip asistan</td><td class="us">Daysy, Luna, Eva ya da Charlie</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="privacy">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2A1B30" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      <div><h3>Günlüğün sana ait</h3><p>Sesin kaydedilmez, yalnızca yazıya çevrilir. Günlüklerin Avrupa'daki sunucularda durur ve yalnızca sen görürsün. Hesabını tek dokunuşla tamamen silebilirsin.</p></div>
+    </div>
+  </section>
+
+  <section class="block wrap" id="kur">
+    <h2 class="disp">Uygulamayı indir</h2>
+    <p class="sub">Daysayday ücretsizdir ve uygulama mağazası gerektirmez. Ana ekranına eklediğinde kendi simgesiyle, tam ekran bir uygulama olarak açılır.</p>
+    <div class="dl">
+      <div class="dl-tabs" role="tablist" aria-label="Cihaz">
+        <button role="tab" type="button" data-p="ios" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.2-1.7-3-1.9-3.6-2-1.5-.2-3 .9-3.8.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.8 1.2 1.8 2.6 3.1 2.5 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.5-1-2.4-4.2zM14 5.3c.7-.8 1.1-1.9 1-3-1 .1-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>iPhone</button>
+        <button role="tab" type="button" data-p="android" aria-selected="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.6 9.5l1.7-3a.4.4 0 0 0-.7-.4l-1.7 3a10.6 10.6 0 0 0-9.8 0l-1.7-3a.4.4 0 1 0-.7.4l1.7 3A9.9 9.9 0 0 0 1.5 17.6h21a9.9 9.9 0 0 0-4.9-8.1zM7.4 14.3a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm9.2 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>Android</button>
+        <button role="tab" type="button" data-p="pc" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Bilgisayar</button>
+      </div>
+
+      <div class="dl-pane" data-p="ios" role="tabpanel" hidden>
+        <div class="dl-steps">
+          <div class="st"><div class="ph"><div class="bar"><span class="hostname">daysayday.com</span></div><div class="share-hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg></div></div><b>1. Paylaş'a dokun</b><p>Bu sayfayı <b>Safari</b>'de aç, alttaki kare ve yukarı oklu <b>Paylaş</b> simgesine dokun.</p></div>
+          <div class="st"><div class="ph"><div class="sheet"><div class="row">Kopyala</div><div class="row hl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M12 8v8M8 12h8"/></svg>Ana Ekrana Ekle</div><div class="row">Yer İşareti Ekle</div></div></div><b>2. Ana Ekrana Ekle</b><p>Açılan listeyi aşağı kaydır ve <b>Ana Ekrana Ekle</b>'yi seç.</p></div>
+          <div class="st"><div class="ph"><div class="addbox"><img src="/img/luna-apple-touch-icon.png" alt=""><div><b>Daysayday</b><span>Web Uygulaması Olarak Aç</span><i class="tg"></i></div></div><div class="addbtn">Ekle</div></div><b>3. Ekle'ye dokun</b><p>“Web Uygulaması Olarak Aç” açık kalsın, sağ üstteki <b>Ekle</b>'ye dokun.</p></div>
+          <div class="st"><div class="ph home"><div class="apps"><i></i><i></i><i></i><img src="/img/luna-apple-touch-icon.png" alt=""><i></i><i></i><i></i><i></i></div><span>Daysayday</span></div><b>4. Hazır!</b><p>Ana ekranındaki Daysy simgesine dokun, uygulama tam ekran açılır.</p></div>
+        </div>
+        <p class="dl-note" id="iosNote">iPhone'da kurulum yalnızca elle yapılabiliyor; Apple siteler için tek tuşla kurulum butonuna izin vermiyor. Chrome kullanıyorsan da adres çubuğundaki Paylaş simgesinden aynı adımlar geçerli.</p>
+      </div>
+
+      <div class="dl-pane" data-p="android" role="tabpanel" hidden>
+        <div class="dl-hero">
+          <img src="/img/luna-icon-192.png" alt="" width="96" height="96">
+          <div><h3 class="disp">Daysayday for Android</h3><p>Ücretsiz · Uygulama çekmecende görünür · Güncellemeler kendiliğinden gelir</p>
+            <button class="btn btn-primary" type="button" id="installBtn">Uygulamayı yükle</button>
+            <p class="dl-note" id="andNote">Buton çalışmazsa: Chrome'da sağ üstteki <b>⋮</b> menüsü → <b>Uygulamayı yükle</b> (ya da <b>Ana ekrana ekle</b>) → <b>Yükle</b>.</p></div>
+        </div>
+      </div>
+
+      <div class="dl-pane" data-p="pc" role="tabpanel" hidden>
+        <div class="dl-hero">
+          <img src="/img/luna-icon-192.png" alt="" width="96" height="96">
+          <div><h3 class="disp">Bilgisayarına kur</h3><p>Chrome ya da Edge'de kendi penceresinde açılan bir uygulama olur.</p>
+            <button class="btn btn-primary" type="button" id="installBtn2">Uygulamayı yükle</button>
+            <p class="dl-note">Buton görünmüyorsa adres çubuğunun sağındaki <b>yükle</b> simgesine tıkla. Telefonuna kurmak istersen bu sayfayı telefonundan aç.</p></div>
+        </div>
+      </div>
+      <p class="dl-done" id="dlDone" hidden>Daysayday zaten bu cihazda kurulu. Ana ekranındaki simgeden açabilirsin.</p>
+    </div>
+  </section>
+
+  <section class="block wrap" id="sss">
+    <h2 class="disp">Sık sorulanlar</h2>
+    <p class="sub">Kısa ve net cevaplar.</p>
+    <div class="faq">
+      <details><summary>Daysayday nedir?</summary><p>Daysayday, konuşarak tutulan bir günlük uygulamasıdır. Günün nasıl geçtiğini bir karaktere anlatırsın; sohbetin kendiliğinden tarihli bir günlük sayfasına dönüşür.</p></details>
+      <details><summary>Daysayday ücretli mi?</summary><p>Hayır, Daysayday ücretsizdir. Uygulama mağazası gerekmez; tarayıcıdan açılır ve telefonun ana ekranına eklenebilir.</p></details>
+      <details><summary>Günlüğümü yazmam gerekiyor mu?</summary><p>Hayır, konuşman yeter. İstersen yazarak da anlatabilirsin. Sayfayı senin anlattıklarından, senin ağzından Daysayday yazar.</p></details>
+      <details><summary>Sesim kaydediliyor mu?</summary><p>Hayır. Konuşman cihazındaki tarayıcıda yazıya çevrilir ve sunucuya yalnızca metin gider. Görüntülü sohbette senin kameran kullanılmaz.</p></details>
+      <details><summary>Karakterler kimler?</summary><p>Dört karakter var: neşeli ve meraklı Daysy, dobra ve esprili Luna, sakin ve tecrübeli Eva, dizi ve film tutkunu Charlie. İstediğini seçip sonra değiştirebilirsin.</p></details>
+      <details><summary>Günlüklerimi silebilir miyim?</summary><p>Evet. Ayarlar bölümündeki “Hesabımı ve tüm günlüklerimi sil” ile hesabını ve bütün günlüklerini kalıcı olarak silebilirsin.</p></details>
+      <details><summary>Daysayday terapi yerine geçer mi?</summary><p>Hayır. Daysayday bir günlük uygulamasıdır, terapi ya da sağlık hizmeti değildir. Kendini kötü hissediyorsan güvendiğin biriyle konuş; acil durumda 112'yi ara.</p></details>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <img src="/img/logo.png" alt="">
+      <h2 class="disp">Say your day, every day.</h2>
+      <p>Ücretsiz hesabını oluştur, ilk günlüğünü bu akşam yaz.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="/app/#kaydol">Kaydol</a>
+        <a class="btn btn-ghost" href="/app/#giris">Giriş yap</a>
+      </div>
+    </div>
+    <footer>
+      <span>© 2026 Daysayday</span>
+      <span><a href="/gizlilik.html">Gizlilik</a></span>
+    </footer>
+  </section>
+</main>
+<script type="module">
+  import { Character } from "/app/character.js";
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); if (e.target.id === "demo") playDemo(); } }), { threshold: .2 });
+  document.querySelectorAll(".rv").forEach(el => io.observe(el));
+  // streak count-up
+  const fc = document.getElementById("flameCard"), fn = document.getElementById("flameNum");
+  new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); let n = 0; const t = setInterval(() => { fn.textContent = ++n; if (n >= 7) clearInterval(t); }, reduce ? 0 : 220); }), { threshold: .4 }).observe(fc);
+  // demo conversation
+  const lines = [["a", "Selaaam! Dün sunum için çok gergindin, nasıl geçti?"], ["u", "Çok iyi geçti! Hocam yayınlamayı düşün dedi."], ["a", "Ayyy gerçekten mi? Gurur duydum! Sonra ne yaptın?"], ["u", "Elif'le kahve içtik, çok güldük."]];
+  let played = false;
+  async function playDemo() {
+    if (played) return; played = true;
+    const box = document.getElementById("demoChat"), wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+    for (const [who, text] of lines) {
+      let typing = null;
+      if (who === "a") { typing = document.createElement("div"); typing.className = "bub a typing show"; typing.innerHTML = "<i></i><i></i><i></i>"; box.append(typing); await wait(900); typing.remove(); }
+      const b = document.createElement("div"); b.className = "bub " + who; b.textContent = text; box.append(b);
+      requestAnimationFrame(() => b.classList.add("show")); await wait(who === "a" ? 1100 : 900);
+    }
+    await wait(400); document.getElementById("demoPage").classList.add("show");
+  }
+  // live characters: silent, like a gif. Mouse: they play while you hover. Phone: once when they scroll into view, again on tap.
+  const said = { daysy: "Hey heyy, geldin! Hadi biraz sohbet edelim, bugün nasıldı?", ivy: "Ne? Bilerek yaptım. Neyse, anlat bakalım.", sage: "Mmm, kahve gibisi yok. Bugün seni ne yordu?", charlie: "Patlamış mısırım hazır, başrol sende. Anlat bakalım!" };
+  const canHover = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll(".friend[data-k]").forEach(card => {
+    const k = card.dataset.k, box = card.querySelector(".live");
+    box.innerHTML = ""; const ch = new Character(box, k); ch.sound = false; ch.voiceOn = false;
+    const p = card.querySelector(".said"); let busy = false, over = false;
+    const tap = card.querySelector(".tap"); if (canHover) tap.remove(); else tap.textContent = "Tekrar izlemek için dokun";
+    const play = async () => {
+      if (busy || still) return; busy = true;
+      do {
+        await ch.signature(said[k], t => p.textContent = "“" + t + "”");
+        if (over) await new Promise(r => setTimeout(r, 1600));
+      } while (over && canHover);
+      busy = false;
+    };
+    if (canHover) {
+      card.addEventListener("mouseenter", () => { over = true; play(); });
+      card.addEventListener("mouseleave", () => { over = false; });
+      card.addEventListener("focus", play); card.addEventListener("click", play);
+    } else {
+      card.addEventListener("click", play);
+      const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { io.disconnect(); setTimeout(play, 300); } }), { threshold: .6 });
+      io.observe(card);
+    }
+  });
+</script>
+<script>
+  (function () {
+    const ua = navigator.userAgent, isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1), isAndroid = /Android/.test(ua);
+    const standalone = navigator.standalone || matchMedia("(display-mode: standalone)").matches;
+    const tabs = document.querySelectorAll(".dl-tabs button"), panes = document.querySelectorAll(".dl-pane");
+    const show = p => { tabs.forEach(t => t.setAttribute("aria-selected", String(t.dataset.p === p))); panes.forEach(x => x.hidden = x.dataset.p !== p); };
+    tabs.forEach(t => t.addEventListener("click", () => show(t.dataset.p)));
+    show(isIOS ? "ios" : isAndroid ? "android" : "pc");
+    if (standalone) document.getElementById("dlDone").hidden = false;
+    let deferred = null;
+    window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; });
+    window.addEventListener("appinstalled", () => { deferred = null; document.getElementById("dlDone").hidden = false; });
+    const install = async () => {
+      if (isIOS) { show("ios"); document.getElementById("kur").scrollIntoView({ behavior: "smooth" }); return; }
+      if (deferred) { deferred.prompt(); const r = await deferred.userChoice; deferred = null; if (r.outcome === "accepted") document.getElementById("dlDone").hidden = false; return; }
+      const n = document.getElementById(isAndroid ? "andNote" : "andNote");
+      alert(isAndroid ? "Chrome'da sağ üstteki ⋮ menüsünü aç ve 'Uygulamayı yükle' ya da 'Ana ekrana ekle'yi seç." : "Adres çubuğunun sağındaki yükle simgesine tıkla ya da tarayıcı menüsünden 'Uygulamayı yükle'yi seç.");
+    };
+    document.getElementById("installBtn").addEventListener("click", install);
+    document.getElementById("installBtn2").addEventListener("click", install);
+  })();
+</script>
+<script>if ("serviceWorker" in navigator) navigator.serviceWorker.register("/sw.js").catch(() => {});</script>
+<script>document.querySelectorAll(".hostname").forEach(e=>{if(location.hostname&&location.hostname!=="localhost")e.textContent=location.hostname})</script></body>
+</html>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="ch" viewBox="0 0 240 262" aria-label="Sage: koyu kahve topuzlu, gözlüklü, adaçayı yeşili hırkalı, elinde kahve kupası olan abla">
+          <circle cx="120" cy="148" r="106" fill="#E4EEDC"></circle>
+          <circle cx="44" cy="120" r="5" fill="#FFFFFF"></circle><circle cx="196" cy="70" r="7" fill="#FFFFFF" opacity=".8"></circle>
+          <g>
+            <path d="M108,156 L108,180 C108,190 103,196 96,199 L144,199 C137,196 132,190 132,180 L132,156Z" fill="#F2C6A0"></path><ellipse cx="120" cy="171" rx="13" ry="5" fill="#E3B08C" opacity=".7"></ellipse>
+            <g>
+              <path d="M58,262 C60,216 86,192 120,192 C154,192 180,216 182,262Z" fill="#F5EBDD"></path>
+              <path d="M58,262 C60,216 86,194 106,192 L112,262Z" fill="#8DB596"></path>
+              <path d="M182,262 C180,216 154,194 134,192 L128,262Z" fill="#8DB596"></path>
+              <path d="M88,222 C85,238 85,252 86,262 M152,222 C155,238 155,252 154,262" fill="none" stroke="#759E80" stroke-width="2.4" stroke-linecap="round"></path>
+              <circle cx="112" cy="234" r="3" fill="#6E9677"></circle><circle cx="112" cy="252" r="3" fill="#6E9677"></circle>
+              <path d="M108,177 Q120,198 132,177" fill="none" stroke="#C9A04E" stroke-width="2" stroke-linecap="round"></path>
+              <circle cx="120" cy="193" r="4.6" fill="#D8B26A" stroke="#B8913F" stroke-width="1.2"></circle>
+              <circle cx="118.6" cy="191.6" r="1.3" fill="#F3DFA8"></circle>
+              <path d="M100,193 Q120,208 140,193" fill="none" stroke="#E2D3C0" stroke-width="3" stroke-linecap="round"></path>
+            </g>
+            <g>
+              <circle cx="120" cy="46" r="25" fill="#3B2620"></circle>
+              <path d="M108,38 C112,30 128,30 132,38" fill="none" stroke="#56382E" stroke-width="3.5" stroke-linecap="round"></path>
+              <rect x="101" y="40" width="38" height="13" rx="6" fill="#B07A4A"></rect>
+              <path d="M108,53 v6 M116,53 v6 M124,53 v6 M132,53 v6" stroke="#8E5E36" stroke-width="3" stroke-linecap="round"></path>
+              <ellipse cx="120" cy="106" rx="64" ry="58" fill="#3B2620"></ellipse>
+              <path d="M64,112 C58,132 62,150 70,160" fill="none" stroke="#3B2620" stroke-width="7" stroke-linecap="round"></path>
+              <path d="M176,112 C182,132 178,150 170,160" fill="none" stroke="#3B2620" stroke-width="7" stroke-linecap="round"></path>
+              <ellipse cx="120" cy="120" rx="56" ry="52" fill="#F2C6A0"></ellipse>
+              <path d="M64,112 C62,68 96,54 120,58 C144,54 178,68 176,112 C168,88 146,76 120,80 C94,76 72,88 64,112Z" fill="#3B2620"></path>
+              <path d="M92,66 C102,60 112,60 118,62" fill="none" stroke="#56382E" stroke-width="4" stroke-linecap="round"></path>
+              <circle cx="64" cy="138" r="3.4" fill="#D8B26A"></circle><circle cx="176" cy="138" r="3.4" fill="#D8B26A"></circle>
+              <ellipse cx="86" cy="144" rx="10" ry="6" fill="#F0907A" opacity=".35"></ellipse><ellipse cx="154" cy="144" rx="10" ry="6" fill="#F0907A" opacity=".35"></ellipse>
+              
+      
+      <clipPath id="sage-clip-L"><path d="M89.5,126 a9.5,10.5 0 1,0 19,0 a9.5,10.5 0 1,0 -19,0Z"></path></clipPath>
+      <g data-eye="L">
+        
+        <g>
+          <g opacity="0">
+            <path d="M89.5,126 a9.5,10.5 0 1,0 19,0 a9.5,10.5 0 1,0 -19,0Z" fill="#FFFFFF"></path>
+            <g clip-path="url(#sage-clip-L)">
+              <g>
+                <circle cx="99" cy="127" r="7" fill="#6B4630"></circle>
+                <circle cx="99" cy="128" r="3.64" fill="#2A1B30"></circle>
+                <circle cx="101.66" cy="123.55" r="2.52" fill="#FFFFFF"></circle>
+                <circle cx="96.2" cy="129.15" r="1.12" fill="#FFFFFF" opacity=".9"></circle>
+              </g>
+            </g>
+            <path d="M88.5,125 Q99,108.5 109.5,125" fill="none" stroke="#2A1B30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            
+            <path d="M90.0,122.9 l-4.5,-2.1 M92.7,119.7 l-2.9,-3.4" stroke="#2A1B30" stroke-width="2.4" stroke-linecap="round"></path>
+          </g>
+          <path d="M89.5,129 Q99,115.5 108.5,129" fill="none" stroke="#2A1B30" stroke-width="3.6" stroke-linecap="round" opacity="1"></path>
+        </g>
+      </g>
+      <clipPath id="sage-clip-R"><path d="M131.5,126 a9.5,10.5 0 1,0 19,0 a9.5,10.5 0 1,0 -19,0Z"></path></clipPath>
+      <g data-eye="R">
+        
+        <g>
+          <g opacity="0">
+            <path d="M131.5,126 a9.5,10.5 0 1,0 19,0 a9.5,10.5 0 1,0 -19,0Z" fill="#FFFFFF"></path>
+            <g clip-path="url(#sage-clip-R)">
+              <g>
+                <circle cx="141" cy="127" r="7" fill="#6B4630"></circle>
+                <circle cx="141" cy="128" r="3.64" fill="#2A1B30"></circle>
+                <circle cx="143.66" cy="123.55" r="2.52" fill="#FFFFFF"></circle>
+                <circle cx="138.2" cy="129.15" r="1.12" fill="#FFFFFF" opacity=".9"></circle>
+              </g>
+            </g>
+            <path d="M130.5,125 Q141,108.5 151.5,125" fill="none" stroke="#2A1B30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            
+            <path d="M150.0,122.9 l4.5,-2.1 M147.3,119.7 l2.9,-3.4" stroke="#2A1B30" stroke-width="2.4" stroke-linecap="round"></path>
+          </g>
+          <path d="M131.5,129 Q141,115.5 150.5,129" fill="none" stroke="#2A1B30" stroke-width="3.6" stroke-linecap="round" opacity="1"></path>
+        </g>
+      </g>
+      <path data-brow="L" d="M89,108.5 Q99,103.5 109,108.5" fill="none" stroke="#3B2620" stroke-width="3.8" stroke-linecap="round"></path><path data-brow="R" d="M131,108.5 Q141,103.5 151,108.5" fill="none" stroke="#3B2620" stroke-width="3.8" stroke-linecap="round"></path>
+      <g transform="translate(120 152) scale(0.9)">
+        <path d="M-11,-1 Q0,1 11,-1 Q8,10 0,11 Q-8,10 -11,-1Z" fill="#6E2A36" stroke="#C0606A" stroke-width="1.6" stroke-linejoin="round" opacity="1"></path>
+        <path d="M-8,0 Q0,5.5 8,0" fill="none" stroke="#C0606A" stroke-width="3.2" stroke-linecap="round" opacity="0"></path>
+      </g>
+              <circle cx="99" cy="127" r="16" fill="#FFFFFF" fill-opacity=".12" stroke="#9A6A3A" stroke-width="3.2"></circle>
+              <circle cx="141" cy="127" r="16" fill="#FFFFFF" fill-opacity=".12" stroke="#9A6A3A" stroke-width="3.2"></circle>
+              <path d="M115,125 Q120,121 125,125" fill="none" stroke="#9A6A3A" stroke-width="3"></path>
+              
+            </g>
+            <g>
+              
+              <path d="M170,212 c12,0 12,18 0,18" fill="none" stroke="#FFFFFF" stroke-width="5"></path>
+              <rect x="136" y="198" width="36" height="40" rx="8" fill="#FFFFFF"></rect>
+              <ellipse cx="154" cy="200" rx="16" ry="3.6" fill="#4A2C1E"></ellipse><ellipse cx="151" cy="199.6" rx="7" ry="1.6" fill="#B07A52" opacity=".9"></ellipse>
+              <ellipse cx="154" cy="220" rx="6.5" ry="9" fill="#6B4430" transform="rotate(20 154 220)"></ellipse><path d="M151,212 C156,217 152,223 157,228" fill="none" stroke="#3E2519" stroke-width="1.6" stroke-linecap="round"></path>
+              
+            </g>
+          </g>
+        </svg>

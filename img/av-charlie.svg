@@ -1,0 +1,102 @@
+<svg class="ch" viewBox="22 18 196 196" aria-label="Charlie: yumuşak kakülleri olan kahve saçlı, muzip sırıtan, sinema desenli krem gömlekli şakacı genç" xmlns="http://www.w3.org/2000/svg">
+          
+          
+          <clipPath id="charlie-bust"><path d="M58,262 C60,216 86,192 120,192 C154,192 180,216 182,262Z"></path></clipPath>
+          <g class="bodybob">
+            <path d="M108,156 L108,180 C108,190 103,196 96,199 L144,199 C137,196 132,190 132,180 L132,156Z" fill="#F6CDAA"></path><ellipse cx="120" cy="171" rx="13" ry="5" fill="#E6B48E" opacity=".7"></ellipse>
+            <g class="torso">
+              <path d="M58,262 C60,216 86,192 120,192 C154,192 180,216 182,262Z" fill="#F4E7CB"></path>
+              <g clip-path="url(#charlie-bust)">
+                <g transform="translate(74 226) rotate(-10)" opacity=".85">
+          <path d="M-3.4,-3.2 a1.9,1.9 0 0,1 2.4,-2 a1.9,1.9 0 0,1 3.2,.4 a1.7,1.7 0 0,1 1.2,2" fill="none" stroke="#B89B70" stroke-width="1.1" stroke-linecap="round"></path>
+          <path d="M-4,-3 L4,-3 L3,4.6 L-3,4.6Z" fill="none" stroke="#B89B70" stroke-width="1.1" stroke-linejoin="round"></path>
+          <path d="M-1.3,-3 L-1,4.6 M1.3,-3 L1,4.6" stroke="#D9897A" stroke-width="1.1"></path></g><g transform="translate(96 240) rotate(14)" opacity=".85">
+          <rect x="-6.5" y="-3.2" width="13" height="6.4" rx="1" fill="none" stroke="#B89B70" stroke-width="1.1"></rect>
+          <path d="M-6.5,-1.6 h13 M-6.5,1.6 h13 M-2.2,-1.6 v3.2 M2.2,-1.6 v3.2" stroke="#B89B70" stroke-width=".8"></path></g><path d="M80,251.8 L80.7,253.3 L82.2,254 L80.7,254.7 L80,256.2 L79.3,254.7 L77.8,254 L79.3,253.3Z" fill="#D9897A" opacity=".7"></path><path d="M92,213.8 L92.7,215.3 L94.2,216 L92.7,216.7 L92,218.2 L91.3,216.7 L89.8,216 L91.3,215.3Z" fill="#D9897A" opacity=".7"></path><g transform="translate(148 220) rotate(-12)" opacity=".85">
+          <rect x="-6.5" y="-3.2" width="13" height="6.4" rx="1" fill="none" stroke="#B89B70" stroke-width="1.1"></rect>
+          <path d="M-6.5,-1.6 h13 M-6.5,1.6 h13 M-2.2,-1.6 v3.2 M2.2,-1.6 v3.2" stroke="#B89B70" stroke-width=".8"></path></g><g transform="translate(162 236) rotate(8)" opacity=".85">
+          <path d="M-3.4,-3.2 a1.9,1.9 0 0,1 2.4,-2 a1.9,1.9 0 0,1 3.2,.4 a1.7,1.7 0 0,1 1.2,2" fill="none" stroke="#B89B70" stroke-width="1.1" stroke-linecap="round"></path>
+          <path d="M-4,-3 L4,-3 L3,4.6 L-3,4.6Z" fill="none" stroke="#B89B70" stroke-width="1.1" stroke-linejoin="round"></path>
+          <path d="M-1.3,-3 L-1,4.6 M1.3,-3 L1,4.6" stroke="#D9897A" stroke-width="1.1"></path></g><path d="M146,249.8 L146.7,251.3 L148.2,252 L146.7,252.7 L146,254.2 L145.3,252.7 L143.8,252 L145.3,251.3Z" fill="#D9897A" opacity=".7"></path><g transform="translate(170 256) rotate(20)" opacity=".85">
+          <rect x="-6.5" y="-3.2" width="13" height="6.4" rx="1" fill="none" stroke="#B89B70" stroke-width="1.1"></rect>
+          <path d="M-6.5,-1.6 h13 M-6.5,1.6 h13 M-2.2,-1.6 v3.2 M2.2,-1.6 v3.2" stroke="#B89B70" stroke-width=".8"></path></g><path d="M136,229.8 L136.7,231.3 L138.2,232 L136.7,232.7 L136,234.2 L135.3,232.7 L133.8,232 L135.3,231.3Z" fill="#D9897A" opacity=".7"></path><g transform="translate(104 258) rotate(-6)" opacity=".85">
+          <path d="M-3.4,-3.2 a1.9,1.9 0 0,1 2.4,-2 a1.9,1.9 0 0,1 3.2,.4 a1.7,1.7 0 0,1 1.2,2" fill="none" stroke="#B89B70" stroke-width="1.1" stroke-linecap="round"></path>
+          <path d="M-4,-3 L4,-3 L3,4.6 L-3,4.6Z" fill="none" stroke="#B89B70" stroke-width="1.1" stroke-linejoin="round"></path>
+          <path d="M-1.3,-3 L-1,4.6 M1.3,-3 L1,4.6" stroke="#D9897A" stroke-width="1.1"></path></g><path d="M158,209.8 L158.7,211.3 L160.2,212 L158.7,212.7 L158,214.2 L157.3,212.7 L155.8,212 L157.3,211.3Z" fill="#D9897A" opacity=".7"></path><path d="M66,241.8 L66.7,243.3 L68.2,244 L66.7,244.7 L66,246.2 L65.3,244.7 L63.8,244 L65.3,243.3Z" fill="#D9897A" opacity=".7"></path><g transform="translate(138 262) rotate(4)" opacity=".85">
+          <path d="M-3.4,-3.2 a1.9,1.9 0 0,1 2.4,-2 a1.9,1.9 0 0,1 3.2,.4 a1.7,1.7 0 0,1 1.2,2" fill="none" stroke="#B89B70" stroke-width="1.1" stroke-linecap="round"></path>
+          <path d="M-4,-3 L4,-3 L3,4.6 L-3,4.6Z" fill="none" stroke="#B89B70" stroke-width="1.1" stroke-linejoin="round"></path>
+          <path d="M-1.3,-3 L-1,4.6 M1.3,-3 L1,4.6" stroke="#D9897A" stroke-width="1.1"></path></g><path d="M112,227.8 L112.7,229.3 L114.2,230 L112.7,230.7 L112,232.2 L111.3,230.7 L109.8,230 L111.3,229.3Z" fill="#D9897A" opacity=".7"></path>
+              </g>
+              <path d="M88,222 C85,238 85,252 86,262 M152,222 C155,238 155,252 154,262" fill="none" stroke="#DCC9A0" stroke-width="2.4" stroke-linecap="round"></path>
+              <path d="M107,195 L120,224 L133,195Z" fill="#F6CDAA"></path>
+              <path d="M120,224 L120,262" stroke="#DCC9A0" stroke-width="2.2"></path>
+              <circle cx="124" cy="236" r="2.6" fill="#C9B68A"></circle><circle cx="124" cy="252" r="2.6" fill="#C9B68A"></circle>
+              <path d="M96,191 L107,194 L120,224 L101,212 L86,206Z" fill="#FBF2DE" stroke="#D9C59A" stroke-width="1.6" stroke-linejoin="round"></path>
+              <path d="M144,191 L133,194 L120,224 L139,212 L154,206Z" fill="#FBF2DE" stroke="#D9C59A" stroke-width="1.6" stroke-linejoin="round"></path>
+            </g>
+            <g class="head">
+              <ellipse cx="65" cy="132" rx="9.5" ry="12.5" fill="#F6CDAA"></ellipse><path d="M68,126 C62,128 62,136 67,139" fill="none" stroke="#E2A988" stroke-width="2.4" stroke-linecap="round"></path>
+              <ellipse cx="175" cy="132" rx="9.5" ry="12.5" fill="#F6CDAA"></ellipse><path d="M172,126 C178,128 178,136 173,139" fill="none" stroke="#E2A988" stroke-width="2.4" stroke-linecap="round"></path>
+              <ellipse cx="120" cy="122" rx="55" ry="52" fill="#F6CDAA"></ellipse>
+              <path d="M63,132 C54,104 58,78 74,64 C80,52 96,44 110,46 C122,38 142,40 152,48 C170,52 184,70 184,94 C186,110 182,122 177,132
+                       C176,118 172,108 166,102 Q166,111 160,114 Q160,102 150,96 Q148,106 138,108 Q140,98 128,94 Q122,104 110,104 Q114,96 104,94 Q96,100 86,108 Q88,100 82,100 Q72,110 67,128Z" fill="#6B4430"></path>
+              <path d="M128,94 C120,82 104,76 90,80 M150,96 C144,84 132,76 118,74 M166,102 C164,90 156,80 146,74" fill="none" stroke="#3E2419" stroke-width="2.2" stroke-linecap="round" opacity=".45"></path>
+              <path d="M86,62 C96,54 108,52 118,52 M134,50 C146,50 158,56 166,64" fill="none" stroke="#8A5C40" stroke-width="3.4" stroke-linecap="round"></path>
+              <ellipse cx="86" cy="149" rx="8" ry="4.5" fill="#F29A9A" opacity=".28"></ellipse><ellipse cx="154" cy="149" rx="8" ry="4.5" fill="#F29A9A" opacity=".28"></ellipse>
+              <path d="M117,140 Q120,143 123,140" fill="none" stroke="#D99E7E" stroke-width="2" stroke-linecap="round"></path>
+              
+      
+      <clipPath id="charlie-clip-L"><path d="M93.6,130 a6.4,7.2 0 1,0 12.8,0 a6.4,7.2 0 1,0 -12.8,0Z"></path></clipPath>
+      <g class="eyewrap" data-eye="L" style="transform: scale(1);">
+        
+        <g class="blinker">
+          <g class="eye-open" style="opacity: 1;">
+            <path d="M93.6,130 a6.4,7.2 0 1,0 12.8,0 a6.4,7.2 0 1,0 -12.8,0Z" fill="#FFFFFF"></path>
+            <g clip-path="url(#charlie-clip-L)">
+              <g class="looker" style="transform: translate(1.5px, 0px);">
+                <circle cx="100" cy="131" r="5.6" fill="#2E1C14"></circle>
+                <circle cx="100" cy="132" r="2.912" fill="#2A1B30"></circle>
+                <circle cx="102.128" cy="128.04" r="1.4112" fill="#FFFFFF"></circle>
+                
+              </g>
+            </g>
+            <path d="M91.6,119.8 L108.4,119.8 L108.4,129 Q100,126.5 91.6,129Z" fill="#F6CDAA"></path>
+                 <path d="M92.39999999999999,129.2 Q100,126.2 107.60000000000001,129.2" fill="none" stroke="#2A1B30" stroke-width="2.8" stroke-linecap="round"></path>
+            
+            
+          </g>
+          <path class="eye-happy" d="M93.6,133 Q100,122.8 106.4,133" fill="none" stroke="#2A1B30" stroke-width="3.6" stroke-linecap="round" opacity="0"></path>
+        </g>
+      </g>
+      <clipPath id="charlie-clip-R"><path d="M133.6,130 a6.4,7.2 0 1,0 12.8,0 a6.4,7.2 0 1,0 -12.8,0Z"></path></clipPath>
+      <g class="eyewrap" data-eye="R" style="transform: scale(1);">
+        
+        <g class="blinker">
+          <g class="eye-open" style="opacity: 1;">
+            <path d="M133.6,130 a6.4,7.2 0 1,0 12.8,0 a6.4,7.2 0 1,0 -12.8,0Z" fill="#FFFFFF"></path>
+            <g clip-path="url(#charlie-clip-R)">
+              <g class="looker" style="transform: translate(1.5px, 0px);">
+                <circle cx="140" cy="131" r="5.6" fill="#2E1C14"></circle>
+                <circle cx="140" cy="132" r="2.912" fill="#2A1B30"></circle>
+                <circle cx="142.128" cy="128.04" r="1.4112" fill="#FFFFFF"></circle>
+                
+              </g>
+            </g>
+            <path d="M131.6,119.8 L148.4,119.8 L148.4,129 Q140,126.5 131.6,129Z" fill="#F6CDAA"></path>
+                 <path d="M132.4,129.2 Q140,126.2 147.6,129.2" fill="none" stroke="#2A1B30" stroke-width="2.8" stroke-linecap="round"></path>
+            
+            
+          </g>
+          <path class="eye-happy" d="M133.6,133 Q140,122.8 146.4,133" fill="none" stroke="#2A1B30" stroke-width="3.6" stroke-linecap="round" opacity="0"></path>
+        </g>
+      </g>
+      <path class="brow" data-brow="L" d="M90,116.5 Q100,114.2 110,116.5" fill="none" stroke="#4E3022" stroke-width="4.8" stroke-linecap="round" style="transform: translateY(0px) rotate(0deg);"></path><path class="brow" data-brow="R" d="M130,116.5 Q140,114.2 150,116.5" fill="none" stroke="#4E3022" stroke-width="4.8" stroke-linecap="round" style="transform: translateY(0px) rotate(0deg);"></path>
+      <g class="mouth" transform="translate(121 155) scale(0.85)">
+        <path class="m-fill" d="M-10,-2 Q0,0 11,-4.5 Q9,6.5 0,7.5 Q-8,6.5 -10,-2Z" fill="#7A2236" stroke="#A8505A" stroke-width="1.6" stroke-linejoin="round" opacity="1"></path>
+        <path class="m-teeth" d="M-9,-1.6 Q0,0.4 10,-3.8 L9.3,-0.6 Q0,2.6 -8.4,0.6Z" fill="#FFFFFF" opacity="1"></path>
+        <path class="m-line" d="M-8,0 Q0,5.5 8,0" fill="none" stroke="#A8505A" stroke-width="3.2" stroke-linecap="round" opacity="0"></path>
+      </g>
+              
+            </g>
+          </g>
+        </svg>
